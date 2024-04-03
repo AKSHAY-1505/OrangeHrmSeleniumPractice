@@ -6,14 +6,12 @@ from leave_page import LeavePage
 from apply_page import ApplyPage
 from my_leaves_page import MyLeavesPage
 from leave_details_page import LeaveDetailsPage
-from base_class import BaseClass
 
 def main():
     driver = webdriver.Chrome()
-    base_obj = BaseClass(driver)
-    base_obj.get_url()
 
     login_page = LoginPage(driver)
+    login_page.get_url()
     login_page.login()
 
     dashboard_page = DashboardPage(driver)
