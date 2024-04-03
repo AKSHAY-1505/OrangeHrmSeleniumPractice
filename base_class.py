@@ -5,8 +5,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 import time
 
 class BaseClass:
-    def __init__(self):
-        self.driver = webdriver.Chrome()
+    def __init__(self, driver):
+        self.driver = driver
 
     def get_url(self):
         self.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
