@@ -2,7 +2,7 @@ from base_class import BaseClass
 
 class ApplyPage(BaseClass):
     def set_leave_type(self):
-        dropdown = self.get_by_xpath('//div[text() = "-- Select --"]')
+        dropdown = self.get_by_xpath("//label[text()='Leave Type']//parent::div/following-sibling::div")
         dropdown.click()
 
         option = self.get_by_xpath('//div[@role = "listbox"]//span')
